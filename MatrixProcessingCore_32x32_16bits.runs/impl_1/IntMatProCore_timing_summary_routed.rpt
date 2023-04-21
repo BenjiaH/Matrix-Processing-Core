@@ -1,0 +1,1589 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3.1 (win64) Build 2489853 Tue Mar 26 04:20:25 MDT 2019
+| Date         : Mon Apr 10 00:59:16 2023
+| Host         : YaowenHu running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -max_paths 10 -file IntMatProCore_timing_summary_routed.rpt -pb IntMatProCore_timing_summary_routed.pb -rpx IntMatProCore_timing_summary_routed.rpx -warn_on_violation
+| Design       : IntMatProCore
+| Device       : 7a15t-csg324
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  false
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock
+2. checking constant_clock
+3. checking pulse_width_clock
+4. checking unconstrained_internal_endpoints
+5. checking no_input_delay
+6. checking no_output_delay
+7. checking multiple_clock
+8. checking generated_clocks
+9. checking loops
+10. checking partial_input_delay
+11. checking partial_output_delay
+12. checking latch_loops
+
+1. checking no_clock
+--------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock
+--------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock
+-----------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints
+--------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay
+--------------------------
+ There are 41 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay
+---------------------------
+ There are 65 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock
+--------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks
+----------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops
+-----------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay
+--------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay
+---------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops
+------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+    192.089        0.000                      0                  518        0.035        0.000                      0                  518       99.500        0.000                       0                   194  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock  Waveform(ns)         Period(ns)      Frequency(MHz)
+-----  ------------         ----------      --------------
+Clock  {0.000 100.000}      200.000         5.000           
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+Clock             192.089        0.000                      0                  518        0.035        0.000                      0                  518       99.500        0.000                       0                   194  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  Clock
+  To Clock:  Clock
+
+Setup :            0  Failing Endpoints,  Worst Slack      192.089ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.035ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack       99.500ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             192.089ns  (required time - arrival time)
+  Source:                 iMacResult1/CLK
+                            (rising edge-triggered cell DSP48E1 clocked by Clock  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Destination:            iMacResult_reg[61]/D
+                            (rising edge-triggered cell FDCE clocked by Clock  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Path Group:             Clock
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            200.000ns  (Clock rise@200.000ns - Clock rise@0.000ns)
+  Data Path Delay:        7.804ns  (logic 4.999ns (64.055%)  route 2.805ns (35.945%))
+  Logic Levels:           3  (CARRY4=2 LUT3=1)
+  Clock Path Skew:        -0.134ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.251ns = ( 204.251 - 200.000 ) 
+    Source Clock Delay      (SCD):    4.706ns
+    Clock Pessimism Removal (CPR):    0.322ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock Clock rise edge)      0.000     0.000 r  
+    E15                                               0.000     0.000 r  Clock (IN)
+                         net (fo=0)                   0.000     0.000    Clock
+    E15                  IBUF (Prop_ibuf_I_O)         0.993     0.993 r  Clock_IBUF_inst/O
+                         net (fo=1, routed)           1.972     2.964    Clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.060 r  Clock_IBUF_BUFG_inst/O
+                         net (fo=194, routed)         1.646     4.706    Clock_IBUF_BUFG
+    DSP48_X0Y20          DSP48E1                                      r  iMacResult1/CLK
+  -------------------------------------------------------------------    -------------------
+    DSP48_X0Y20          DSP48E1 (Prop_dsp48e1_CLK_P[31])
+                                                      4.009     8.715 r  iMacResult1/P[31]
+                         net (fo=65, routed)          2.805    11.520    iMacResult1_n_74
+    SLICE_X9Y61          LUT3 (Prop_lut3_I0_O)        0.124    11.644 r  iMacResult[56]_i_9/O
+                         net (fo=1, routed)           0.000    11.644    iMacResult[56]_i_9_n_0
+    SLICE_X9Y61          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532    12.176 r  iMacResult_reg[56]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    12.176    iMacResult_reg[56]_i_1_n_0
+    SLICE_X9Y62          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    12.510 r  iMacResult_reg[60]_i_1/O[1]
+                         net (fo=1, routed)           0.000    12.510    iMacResult_reg[60]_i_1_n_6
+    SLICE_X9Y62          FDCE                                         r  iMacResult_reg[61]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock Clock rise edge)    200.000   200.000 r  
+    E15                                               0.000   200.000 r  Clock (IN)
+                         net (fo=0)                   0.000   200.000    Clock
+    E15                  IBUF (Prop_ibuf_I_O)         0.859   200.859 r  Clock_IBUF_inst/O
+                         net (fo=1, routed)           1.868   202.727    Clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091   202.818 r  Clock_IBUF_BUFG_inst/O
+                         net (fo=194, routed)         1.433   204.251    Clock_IBUF_BUFG
+    SLICE_X9Y62          FDCE                                         r  iMacResult_reg[61]/C
+                         clock pessimism              0.322   204.572    
+                         clock uncertainty           -0.035   204.537    
+    SLICE_X9Y62          FDCE (Setup_fdce_C_D)        0.062   204.599    iMacResult_reg[61]
+  -------------------------------------------------------------------
+                         required time                        204.599    
+                         arrival time                         -12.510    
+  -------------------------------------------------------------------
+                         slack                                192.089    
+
+Slack (MET) :             192.110ns  (required time - arrival time)
+  Source:                 iMacResult1/CLK
+                            (rising edge-triggered cell DSP48E1 clocked by Clock  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Destination:            iMacResult_reg[63]/D
+                            (rising edge-triggered cell FDCE clocked by Clock  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Path Group:             Clock
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            200.000ns  (Clock rise@200.000ns - Clock rise@0.000ns)
+  Data Path Delay:        7.783ns  (logic 4.978ns (63.958%)  route 2.805ns (36.042%))
+  Logic Levels:           3  (CARRY4=2 LUT3=1)
+  Clock Path Skew:        -0.134ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.251ns = ( 204.251 - 200.000 ) 
+    Source Clock Delay      (SCD):    4.706ns
+    Clock Pessimism Removal (CPR):    0.322ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock Clock rise edge)      0.000     0.000 r  
+    E15                                               0.000     0.000 r  Clock (IN)
+                         net (fo=0)                   0.000     0.000    Clock
+    E15                  IBUF (Prop_ibuf_I_O)         0.993     0.993 r  Clock_IBUF_inst/O
+                         net (fo=1, routed)           1.972     2.964    Clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.060 r  Clock_IBUF_BUFG_inst/O
+                         net (fo=194, routed)         1.646     4.706    Clock_IBUF_BUFG
+    DSP48_X0Y20          DSP48E1                                      r  iMacResult1/CLK
+  -------------------------------------------------------------------    -------------------
+    DSP48_X0Y20          DSP48E1 (Prop_dsp48e1_CLK_P[31])
+                                                      4.009     8.715 r  iMacResult1/P[31]
+                         net (fo=65, routed)          2.805    11.520    iMacResult1_n_74
+    SLICE_X9Y61          LUT3 (Prop_lut3_I0_O)        0.124    11.644 r  iMacResult[56]_i_9/O
+                         net (fo=1, routed)           0.000    11.644    iMacResult[56]_i_9_n_0
+    SLICE_X9Y61          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532    12.176 r  iMacResult_reg[56]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    12.176    iMacResult_reg[56]_i_1_n_0
+    SLICE_X9Y62          CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313    12.489 r  iMacResult_reg[60]_i_1/O[3]
+                         net (fo=1, routed)           0.000    12.489    iMacResult_reg[60]_i_1_n_4
+    SLICE_X9Y62          FDCE                                         r  iMacResult_reg[63]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock Clock rise edge)    200.000   200.000 r  
+    E15                                               0.000   200.000 r  Clock (IN)
+                         net (fo=0)                   0.000   200.000    Clock
+    E15                  IBUF (Prop_ibuf_I_O)         0.859   200.859 r  Clock_IBUF_inst/O
+                         net (fo=1, routed)           1.868   202.727    Clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091   202.818 r  Clock_IBUF_BUFG_inst/O
+                         net (fo=194, routed)         1.433   204.251    Clock_IBUF_BUFG
+    SLICE_X9Y62          FDCE                                         r  iMacResult_reg[63]/C
+                         clock pessimism              0.322   204.572    
+                         clock uncertainty           -0.035   204.537    
+    SLICE_X9Y62          FDCE (Setup_fdce_C_D)        0.062   204.599    iMacResult_reg[63]
+  -------------------------------------------------------------------
+                         required time                        204.599    
+                         arrival time                         -12.489    
+  -------------------------------------------------------------------
+                         slack                                192.110    
+
+Slack (MET) :             192.184ns  (required time - arrival time)
+  Source:                 iMacResult1/CLK
+                            (rising edge-triggered cell DSP48E1 clocked by Clock  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Destination:            iMacResult_reg[62]/D
+                            (rising edge-triggered cell FDCE clocked by Clock  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Path Group:             Clock
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            200.000ns  (Clock rise@200.000ns - Clock rise@0.000ns)
+  Data Path Delay:        7.709ns  (logic 4.904ns (63.612%)  route 2.805ns (36.388%))
+  Logic Levels:           3  (CARRY4=2 LUT3=1)
+  Clock Path Skew:        -0.134ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.251ns = ( 204.251 - 200.000 ) 
+    Source Clock Delay      (SCD):    4.706ns
+    Clock Pessimism Removal (CPR):    0.322ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock Clock rise edge)      0.000     0.000 r  
+    E15                                               0.000     0.000 r  Clock (IN)
+                         net (fo=0)                   0.000     0.000    Clock
+    E15                  IBUF (Prop_ibuf_I_O)         0.993     0.993 r  Clock_IBUF_inst/O
+                         net (fo=1, routed)           1.972     2.964    Clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.060 r  Clock_IBUF_BUFG_inst/O
+                         net (fo=194, routed)         1.646     4.706    Clock_IBUF_BUFG
+    DSP48_X0Y20          DSP48E1                                      r  iMacResult1/CLK
+  -------------------------------------------------------------------    -------------------
+    DSP48_X0Y20          DSP48E1 (Prop_dsp48e1_CLK_P[31])
+                                                      4.009     8.715 r  iMacResult1/P[31]
+                         net (fo=65, routed)          2.805    11.520    iMacResult1_n_74
+    SLICE_X9Y61          LUT3 (Prop_lut3_I0_O)        0.124    11.644 r  iMacResult[56]_i_9/O
+                         net (fo=1, routed)           0.000    11.644    iMacResult[56]_i_9_n_0
+    SLICE_X9Y61          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532    12.176 r  iMacResult_reg[56]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    12.176    iMacResult_reg[56]_i_1_n_0
+    SLICE_X9Y62          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239    12.415 r  iMacResult_reg[60]_i_1/O[2]
+                         net (fo=1, routed)           0.000    12.415    iMacResult_reg[60]_i_1_n_5
+    SLICE_X9Y62          FDCE                                         r  iMacResult_reg[62]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock Clock rise edge)    200.000   200.000 r  
+    E15                                               0.000   200.000 r  Clock (IN)
+                         net (fo=0)                   0.000   200.000    Clock
+    E15                  IBUF (Prop_ibuf_I_O)         0.859   200.859 r  Clock_IBUF_inst/O
+                         net (fo=1, routed)           1.868   202.727    Clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091   202.818 r  Clock_IBUF_BUFG_inst/O
+                         net (fo=194, routed)         1.433   204.251    Clock_IBUF_BUFG
+    SLICE_X9Y62          FDCE                                         r  iMacResult_reg[62]/C
+                         clock pessimism              0.322   204.572    
+                         clock uncertainty           -0.035   204.537    
+    SLICE_X9Y62          FDCE (Setup_fdce_C_D)        0.062   204.599    iMacResult_reg[62]
+  -------------------------------------------------------------------
+                         required time                        204.599    
+                         arrival time                         -12.415    
+  -------------------------------------------------------------------
+                         slack                                192.184    
+
+Slack (MET) :             192.200ns  (required time - arrival time)
+  Source:                 iMacResult1/CLK
+                            (rising edge-triggered cell DSP48E1 clocked by Clock  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Destination:            iMacResult_reg[60]/D
+                            (rising edge-triggered cell FDCE clocked by Clock  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Path Group:             Clock
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            200.000ns  (Clock rise@200.000ns - Clock rise@0.000ns)
+  Data Path Delay:        7.693ns  (logic 4.888ns (63.536%)  route 2.805ns (36.464%))
+  Logic Levels:           3  (CARRY4=2 LUT3=1)
+  Clock Path Skew:        -0.134ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.251ns = ( 204.251 - 200.000 ) 
+    Source Clock Delay      (SCD):    4.706ns
+    Clock Pessimism Removal (CPR):    0.322ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock Clock rise edge)      0.000     0.000 r  
+    E15                                               0.000     0.000 r  Clock (IN)
+                         net (fo=0)                   0.000     0.000    Clock
+    E15                  IBUF (Prop_ibuf_I_O)         0.993     0.993 r  Clock_IBUF_inst/O
+                         net (fo=1, routed)           1.972     2.964    Clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.060 r  Clock_IBUF_BUFG_inst/O
+                         net (fo=194, routed)         1.646     4.706    Clock_IBUF_BUFG
+    DSP48_X0Y20          DSP48E1                                      r  iMacResult1/CLK
+  -------------------------------------------------------------------    -------------------
+    DSP48_X0Y20          DSP48E1 (Prop_dsp48e1_CLK_P[31])
+                                                      4.009     8.715 r  iMacResult1/P[31]
+                         net (fo=65, routed)          2.805    11.520    iMacResult1_n_74
+    SLICE_X9Y61          LUT3 (Prop_lut3_I0_O)        0.124    11.644 r  iMacResult[56]_i_9/O
+                         net (fo=1, routed)           0.000    11.644    iMacResult[56]_i_9_n_0
+    SLICE_X9Y61          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532    12.176 r  iMacResult_reg[56]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    12.176    iMacResult_reg[56]_i_1_n_0
+    SLICE_X9Y62          CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.223    12.399 r  iMacResult_reg[60]_i_1/O[0]
+                         net (fo=1, routed)           0.000    12.399    iMacResult_reg[60]_i_1_n_7
+    SLICE_X9Y62          FDCE                                         r  iMacResult_reg[60]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock Clock rise edge)    200.000   200.000 r  
+    E15                                               0.000   200.000 r  Clock (IN)
+                         net (fo=0)                   0.000   200.000    Clock
+    E15                  IBUF (Prop_ibuf_I_O)         0.859   200.859 r  Clock_IBUF_inst/O
+                         net (fo=1, routed)           1.868   202.727    Clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091   202.818 r  Clock_IBUF_BUFG_inst/O
+                         net (fo=194, routed)         1.433   204.251    Clock_IBUF_BUFG
+    SLICE_X9Y62          FDCE                                         r  iMacResult_reg[60]/C
+                         clock pessimism              0.322   204.572    
+                         clock uncertainty           -0.035   204.537    
+    SLICE_X9Y62          FDCE (Setup_fdce_C_D)        0.062   204.599    iMacResult_reg[60]
+  -------------------------------------------------------------------
+                         required time                        204.599    
+                         arrival time                         -12.399    
+  -------------------------------------------------------------------
+                         slack                                192.200    
+
+Slack (MET) :             192.227ns  (required time - arrival time)
+  Source:                 iMacResult1/CLK
+                            (rising edge-triggered cell DSP48E1 clocked by Clock  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Destination:            iMacResult_reg[57]/D
+                            (rising edge-triggered cell FDCE clocked by Clock  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Path Group:             Clock
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            200.000ns  (Clock rise@200.000ns - Clock rise@0.000ns)
+  Data Path Delay:        7.668ns  (logic 6.367ns (83.037%)  route 1.301ns (16.963%))
+  Logic Levels:           15  (CARRY4=14 LUT3=1)
+  Clock Path Skew:        -0.133ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.252ns = ( 204.252 - 200.000 ) 
+    Source Clock Delay      (SCD):    4.706ns
+    Clock Pessimism Removal (CPR):    0.322ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock Clock rise edge)      0.000     0.000 r  
+    E15                                               0.000     0.000 r  Clock (IN)
+                         net (fo=0)                   0.000     0.000    Clock
+    E15                  IBUF (Prop_ibuf_I_O)         0.993     0.993 r  Clock_IBUF_inst/O
+                         net (fo=1, routed)           1.972     2.964    Clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.060 r  Clock_IBUF_BUFG_inst/O
+                         net (fo=194, routed)         1.646     4.706    Clock_IBUF_BUFG
+    DSP48_X0Y20          DSP48E1                                      r  iMacResult1/CLK
+  -------------------------------------------------------------------    -------------------
+    DSP48_X0Y20          DSP48E1 (Prop_dsp48e1_CLK_P[4])
+                                                      4.009     8.715 r  iMacResult1/P[4]
+                         net (fo=2, routed)           1.300    10.015    iMacResult1_n_101
+    SLICE_X9Y48          LUT3 (Prop_lut3_I0_O)        0.124    10.139 r  iMacResult[4]_i_9/O
+                         net (fo=1, routed)           0.000    10.139    iMacResult[4]_i_9_n_0
+    SLICE_X9Y48          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532    10.671 r  iMacResult_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.671    iMacResult_reg[4]_i_1_n_0
+    SLICE_X9Y49          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.785 r  iMacResult_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.001    10.785    iMacResult_reg[8]_i_1_n_0
+    SLICE_X9Y50          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.899 r  iMacResult_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.899    iMacResult_reg[12]_i_1_n_0
+    SLICE_X9Y51          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.013 r  iMacResult_reg[16]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    11.013    iMacResult_reg[16]_i_1_n_0
+    SLICE_X9Y52          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.127 r  iMacResult_reg[20]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    11.127    iMacResult_reg[20]_i_1_n_0
+    SLICE_X9Y53          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.241 r  iMacResult_reg[24]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    11.241    iMacResult_reg[24]_i_1_n_0
+    SLICE_X9Y54          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.355 r  iMacResult_reg[28]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    11.355    iMacResult_reg[28]_i_1_n_0
+    SLICE_X9Y55          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.469 r  iMacResult_reg[32]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    11.469    iMacResult_reg[32]_i_1_n_0
+    SLICE_X9Y56          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.583 r  iMacResult_reg[36]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    11.583    iMacResult_reg[36]_i_1_n_0
+    SLICE_X9Y57          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.697 r  iMacResult_reg[40]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    11.697    iMacResult_reg[40]_i_1_n_0
+    SLICE_X9Y58          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.811 r  iMacResult_reg[44]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    11.811    iMacResult_reg[44]_i_1_n_0
+    SLICE_X9Y59          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.925 r  iMacResult_reg[48]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    11.925    iMacResult_reg[48]_i_1_n_0
+    SLICE_X9Y60          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    12.039 r  iMacResult_reg[52]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    12.039    iMacResult_reg[52]_i_1_n_0
+    SLICE_X9Y61          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    12.373 r  iMacResult_reg[56]_i_1/O[1]
+                         net (fo=1, routed)           0.000    12.373    iMacResult_reg[56]_i_1_n_6
+    SLICE_X9Y61          FDCE                                         r  iMacResult_reg[57]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock Clock rise edge)    200.000   200.000 r  
+    E15                                               0.000   200.000 r  Clock (IN)
+                         net (fo=0)                   0.000   200.000    Clock
+    E15                  IBUF (Prop_ibuf_I_O)         0.859   200.859 r  Clock_IBUF_inst/O
+                         net (fo=1, routed)           1.868   202.727    Clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091   202.818 r  Clock_IBUF_BUFG_inst/O
+                         net (fo=194, routed)         1.434   204.252    Clock_IBUF_BUFG
+    SLICE_X9Y61          FDCE                                         r  iMacResult_reg[57]/C
+                         clock pessimism              0.322   204.573    
+                         clock uncertainty           -0.035   204.538    
+    SLICE_X9Y61          FDCE (Setup_fdce_C_D)        0.062   204.600    iMacResult_reg[57]
+  -------------------------------------------------------------------
+                         required time                        204.600    
+                         arrival time                         -12.373    
+  -------------------------------------------------------------------
+                         slack                                192.227    
+
+Slack (MET) :             192.247ns  (required time - arrival time)
+  Source:                 iMacResult1/CLK
+                            (rising edge-triggered cell DSP48E1 clocked by Clock  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Destination:            iMacResult_reg[59]/D
+                            (rising edge-triggered cell FDCE clocked by Clock  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Path Group:             Clock
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            200.000ns  (Clock rise@200.000ns - Clock rise@0.000ns)
+  Data Path Delay:        7.647ns  (logic 6.346ns (82.991%)  route 1.301ns (17.009%))
+  Logic Levels:           15  (CARRY4=14 LUT3=1)
+  Clock Path Skew:        -0.133ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.252ns = ( 204.252 - 200.000 ) 
+    Source Clock Delay      (SCD):    4.706ns
+    Clock Pessimism Removal (CPR):    0.322ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock Clock rise edge)      0.000     0.000 r  
+    E15                                               0.000     0.000 r  Clock (IN)
+                         net (fo=0)                   0.000     0.000    Clock
+    E15                  IBUF (Prop_ibuf_I_O)         0.993     0.993 r  Clock_IBUF_inst/O
+                         net (fo=1, routed)           1.972     2.964    Clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.060 r  Clock_IBUF_BUFG_inst/O
+                         net (fo=194, routed)         1.646     4.706    Clock_IBUF_BUFG
+    DSP48_X0Y20          DSP48E1                                      r  iMacResult1/CLK
+  -------------------------------------------------------------------    -------------------
+    DSP48_X0Y20          DSP48E1 (Prop_dsp48e1_CLK_P[4])
+                                                      4.009     8.715 r  iMacResult1/P[4]
+                         net (fo=2, routed)           1.300    10.015    iMacResult1_n_101
+    SLICE_X9Y48          LUT3 (Prop_lut3_I0_O)        0.124    10.139 r  iMacResult[4]_i_9/O
+                         net (fo=1, routed)           0.000    10.139    iMacResult[4]_i_9_n_0
+    SLICE_X9Y48          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532    10.671 r  iMacResult_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.671    iMacResult_reg[4]_i_1_n_0
+    SLICE_X9Y49          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.785 r  iMacResult_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.001    10.785    iMacResult_reg[8]_i_1_n_0
+    SLICE_X9Y50          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.899 r  iMacResult_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.899    iMacResult_reg[12]_i_1_n_0
+    SLICE_X9Y51          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.013 r  iMacResult_reg[16]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    11.013    iMacResult_reg[16]_i_1_n_0
+    SLICE_X9Y52          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.127 r  iMacResult_reg[20]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    11.127    iMacResult_reg[20]_i_1_n_0
+    SLICE_X9Y53          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.241 r  iMacResult_reg[24]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    11.241    iMacResult_reg[24]_i_1_n_0
+    SLICE_X9Y54          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.355 r  iMacResult_reg[28]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    11.355    iMacResult_reg[28]_i_1_n_0
+    SLICE_X9Y55          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.469 r  iMacResult_reg[32]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    11.469    iMacResult_reg[32]_i_1_n_0
+    SLICE_X9Y56          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.583 r  iMacResult_reg[36]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    11.583    iMacResult_reg[36]_i_1_n_0
+    SLICE_X9Y57          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.697 r  iMacResult_reg[40]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    11.697    iMacResult_reg[40]_i_1_n_0
+    SLICE_X9Y58          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.811 r  iMacResult_reg[44]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    11.811    iMacResult_reg[44]_i_1_n_0
+    SLICE_X9Y59          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.925 r  iMacResult_reg[48]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    11.925    iMacResult_reg[48]_i_1_n_0
+    SLICE_X9Y60          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    12.039 r  iMacResult_reg[52]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    12.039    iMacResult_reg[52]_i_1_n_0
+    SLICE_X9Y61          CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313    12.352 r  iMacResult_reg[56]_i_1/O[3]
+                         net (fo=1, routed)           0.000    12.352    iMacResult_reg[56]_i_1_n_4
+    SLICE_X9Y61          FDCE                                         r  iMacResult_reg[59]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock Clock rise edge)    200.000   200.000 r  
+    E15                                               0.000   200.000 r  Clock (IN)
+                         net (fo=0)                   0.000   200.000    Clock
+    E15                  IBUF (Prop_ibuf_I_O)         0.859   200.859 r  Clock_IBUF_inst/O
+                         net (fo=1, routed)           1.868   202.727    Clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091   202.818 r  Clock_IBUF_BUFG_inst/O
+                         net (fo=194, routed)         1.434   204.252    Clock_IBUF_BUFG
+    SLICE_X9Y61          FDCE                                         r  iMacResult_reg[59]/C
+                         clock pessimism              0.322   204.573    
+                         clock uncertainty           -0.035   204.538    
+    SLICE_X9Y61          FDCE (Setup_fdce_C_D)        0.062   204.600    iMacResult_reg[59]
+  -------------------------------------------------------------------
+                         required time                        204.600    
+                         arrival time                         -12.352    
+  -------------------------------------------------------------------
+                         slack                                192.247    
+
+Slack (MET) :             192.321ns  (required time - arrival time)
+  Source:                 iMacResult1/CLK
+                            (rising edge-triggered cell DSP48E1 clocked by Clock  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Destination:            iMacResult_reg[58]/D
+                            (rising edge-triggered cell FDCE clocked by Clock  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Path Group:             Clock
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            200.000ns  (Clock rise@200.000ns - Clock rise@0.000ns)
+  Data Path Delay:        7.573ns  (logic 6.272ns (82.824%)  route 1.301ns (17.176%))
+  Logic Levels:           15  (CARRY4=14 LUT3=1)
+  Clock Path Skew:        -0.133ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.252ns = ( 204.252 - 200.000 ) 
+    Source Clock Delay      (SCD):    4.706ns
+    Clock Pessimism Removal (CPR):    0.322ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock Clock rise edge)      0.000     0.000 r  
+    E15                                               0.000     0.000 r  Clock (IN)
+                         net (fo=0)                   0.000     0.000    Clock
+    E15                  IBUF (Prop_ibuf_I_O)         0.993     0.993 r  Clock_IBUF_inst/O
+                         net (fo=1, routed)           1.972     2.964    Clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.060 r  Clock_IBUF_BUFG_inst/O
+                         net (fo=194, routed)         1.646     4.706    Clock_IBUF_BUFG
+    DSP48_X0Y20          DSP48E1                                      r  iMacResult1/CLK
+  -------------------------------------------------------------------    -------------------
+    DSP48_X0Y20          DSP48E1 (Prop_dsp48e1_CLK_P[4])
+                                                      4.009     8.715 r  iMacResult1/P[4]
+                         net (fo=2, routed)           1.300    10.015    iMacResult1_n_101
+    SLICE_X9Y48          LUT3 (Prop_lut3_I0_O)        0.124    10.139 r  iMacResult[4]_i_9/O
+                         net (fo=1, routed)           0.000    10.139    iMacResult[4]_i_9_n_0
+    SLICE_X9Y48          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532    10.671 r  iMacResult_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.671    iMacResult_reg[4]_i_1_n_0
+    SLICE_X9Y49          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.785 r  iMacResult_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.001    10.785    iMacResult_reg[8]_i_1_n_0
+    SLICE_X9Y50          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.899 r  iMacResult_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.899    iMacResult_reg[12]_i_1_n_0
+    SLICE_X9Y51          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.013 r  iMacResult_reg[16]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    11.013    iMacResult_reg[16]_i_1_n_0
+    SLICE_X9Y52          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.127 r  iMacResult_reg[20]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    11.127    iMacResult_reg[20]_i_1_n_0
+    SLICE_X9Y53          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.241 r  iMacResult_reg[24]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    11.241    iMacResult_reg[24]_i_1_n_0
+    SLICE_X9Y54          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.355 r  iMacResult_reg[28]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    11.355    iMacResult_reg[28]_i_1_n_0
+    SLICE_X9Y55          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.469 r  iMacResult_reg[32]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    11.469    iMacResult_reg[32]_i_1_n_0
+    SLICE_X9Y56          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.583 r  iMacResult_reg[36]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    11.583    iMacResult_reg[36]_i_1_n_0
+    SLICE_X9Y57          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.697 r  iMacResult_reg[40]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    11.697    iMacResult_reg[40]_i_1_n_0
+    SLICE_X9Y58          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.811 r  iMacResult_reg[44]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    11.811    iMacResult_reg[44]_i_1_n_0
+    SLICE_X9Y59          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.925 r  iMacResult_reg[48]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    11.925    iMacResult_reg[48]_i_1_n_0
+    SLICE_X9Y60          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    12.039 r  iMacResult_reg[52]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    12.039    iMacResult_reg[52]_i_1_n_0
+    SLICE_X9Y61          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239    12.278 r  iMacResult_reg[56]_i_1/O[2]
+                         net (fo=1, routed)           0.000    12.278    iMacResult_reg[56]_i_1_n_5
+    SLICE_X9Y61          FDCE                                         r  iMacResult_reg[58]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock Clock rise edge)    200.000   200.000 r  
+    E15                                               0.000   200.000 r  Clock (IN)
+                         net (fo=0)                   0.000   200.000    Clock
+    E15                  IBUF (Prop_ibuf_I_O)         0.859   200.859 r  Clock_IBUF_inst/O
+                         net (fo=1, routed)           1.868   202.727    Clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091   202.818 r  Clock_IBUF_BUFG_inst/O
+                         net (fo=194, routed)         1.434   204.252    Clock_IBUF_BUFG
+    SLICE_X9Y61          FDCE                                         r  iMacResult_reg[58]/C
+                         clock pessimism              0.322   204.573    
+                         clock uncertainty           -0.035   204.538    
+    SLICE_X9Y61          FDCE (Setup_fdce_C_D)        0.062   204.600    iMacResult_reg[58]
+  -------------------------------------------------------------------
+                         required time                        204.600    
+                         arrival time                         -12.278    
+  -------------------------------------------------------------------
+                         slack                                192.321    
+
+Slack (MET) :             192.337ns  (required time - arrival time)
+  Source:                 iMacResult1/CLK
+                            (rising edge-triggered cell DSP48E1 clocked by Clock  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Destination:            iMacResult_reg[56]/D
+                            (rising edge-triggered cell FDCE clocked by Clock  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Path Group:             Clock
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            200.000ns  (Clock rise@200.000ns - Clock rise@0.000ns)
+  Data Path Delay:        7.557ns  (logic 6.256ns (82.788%)  route 1.301ns (17.212%))
+  Logic Levels:           15  (CARRY4=14 LUT3=1)
+  Clock Path Skew:        -0.133ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.252ns = ( 204.252 - 200.000 ) 
+    Source Clock Delay      (SCD):    4.706ns
+    Clock Pessimism Removal (CPR):    0.322ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock Clock rise edge)      0.000     0.000 r  
+    E15                                               0.000     0.000 r  Clock (IN)
+                         net (fo=0)                   0.000     0.000    Clock
+    E15                  IBUF (Prop_ibuf_I_O)         0.993     0.993 r  Clock_IBUF_inst/O
+                         net (fo=1, routed)           1.972     2.964    Clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.060 r  Clock_IBUF_BUFG_inst/O
+                         net (fo=194, routed)         1.646     4.706    Clock_IBUF_BUFG
+    DSP48_X0Y20          DSP48E1                                      r  iMacResult1/CLK
+  -------------------------------------------------------------------    -------------------
+    DSP48_X0Y20          DSP48E1 (Prop_dsp48e1_CLK_P[4])
+                                                      4.009     8.715 r  iMacResult1/P[4]
+                         net (fo=2, routed)           1.300    10.015    iMacResult1_n_101
+    SLICE_X9Y48          LUT3 (Prop_lut3_I0_O)        0.124    10.139 r  iMacResult[4]_i_9/O
+                         net (fo=1, routed)           0.000    10.139    iMacResult[4]_i_9_n_0
+    SLICE_X9Y48          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532    10.671 r  iMacResult_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.671    iMacResult_reg[4]_i_1_n_0
+    SLICE_X9Y49          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.785 r  iMacResult_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.001    10.785    iMacResult_reg[8]_i_1_n_0
+    SLICE_X9Y50          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.899 r  iMacResult_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.899    iMacResult_reg[12]_i_1_n_0
+    SLICE_X9Y51          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.013 r  iMacResult_reg[16]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    11.013    iMacResult_reg[16]_i_1_n_0
+    SLICE_X9Y52          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.127 r  iMacResult_reg[20]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    11.127    iMacResult_reg[20]_i_1_n_0
+    SLICE_X9Y53          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.241 r  iMacResult_reg[24]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    11.241    iMacResult_reg[24]_i_1_n_0
+    SLICE_X9Y54          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.355 r  iMacResult_reg[28]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    11.355    iMacResult_reg[28]_i_1_n_0
+    SLICE_X9Y55          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.469 r  iMacResult_reg[32]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    11.469    iMacResult_reg[32]_i_1_n_0
+    SLICE_X9Y56          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.583 r  iMacResult_reg[36]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    11.583    iMacResult_reg[36]_i_1_n_0
+    SLICE_X9Y57          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.697 r  iMacResult_reg[40]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    11.697    iMacResult_reg[40]_i_1_n_0
+    SLICE_X9Y58          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.811 r  iMacResult_reg[44]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    11.811    iMacResult_reg[44]_i_1_n_0
+    SLICE_X9Y59          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.925 r  iMacResult_reg[48]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    11.925    iMacResult_reg[48]_i_1_n_0
+    SLICE_X9Y60          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    12.039 r  iMacResult_reg[52]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    12.039    iMacResult_reg[52]_i_1_n_0
+    SLICE_X9Y61          CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.223    12.262 r  iMacResult_reg[56]_i_1/O[0]
+                         net (fo=1, routed)           0.000    12.262    iMacResult_reg[56]_i_1_n_7
+    SLICE_X9Y61          FDCE                                         r  iMacResult_reg[56]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock Clock rise edge)    200.000   200.000 r  
+    E15                                               0.000   200.000 r  Clock (IN)
+                         net (fo=0)                   0.000   200.000    Clock
+    E15                  IBUF (Prop_ibuf_I_O)         0.859   200.859 r  Clock_IBUF_inst/O
+                         net (fo=1, routed)           1.868   202.727    Clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091   202.818 r  Clock_IBUF_BUFG_inst/O
+                         net (fo=194, routed)         1.434   204.252    Clock_IBUF_BUFG
+    SLICE_X9Y61          FDCE                                         r  iMacResult_reg[56]/C
+                         clock pessimism              0.322   204.573    
+                         clock uncertainty           -0.035   204.538    
+    SLICE_X9Y61          FDCE (Setup_fdce_C_D)        0.062   204.600    iMacResult_reg[56]
+  -------------------------------------------------------------------
+                         required time                        204.600    
+                         arrival time                         -12.262    
+  -------------------------------------------------------------------
+                         slack                                192.337    
+
+Slack (MET) :             192.342ns  (required time - arrival time)
+  Source:                 iMacResult1/CLK
+                            (rising edge-triggered cell DSP48E1 clocked by Clock  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Destination:            iMacResult_reg[53]/D
+                            (rising edge-triggered cell FDCE clocked by Clock  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Path Group:             Clock
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            200.000ns  (Clock rise@200.000ns - Clock rise@0.000ns)
+  Data Path Delay:        7.554ns  (logic 6.253ns (82.781%)  route 1.301ns (17.219%))
+  Logic Levels:           14  (CARRY4=13 LUT3=1)
+  Clock Path Skew:        -0.132ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.253ns = ( 204.253 - 200.000 ) 
+    Source Clock Delay      (SCD):    4.706ns
+    Clock Pessimism Removal (CPR):    0.322ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock Clock rise edge)      0.000     0.000 r  
+    E15                                               0.000     0.000 r  Clock (IN)
+                         net (fo=0)                   0.000     0.000    Clock
+    E15                  IBUF (Prop_ibuf_I_O)         0.993     0.993 r  Clock_IBUF_inst/O
+                         net (fo=1, routed)           1.972     2.964    Clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.060 r  Clock_IBUF_BUFG_inst/O
+                         net (fo=194, routed)         1.646     4.706    Clock_IBUF_BUFG
+    DSP48_X0Y20          DSP48E1                                      r  iMacResult1/CLK
+  -------------------------------------------------------------------    -------------------
+    DSP48_X0Y20          DSP48E1 (Prop_dsp48e1_CLK_P[4])
+                                                      4.009     8.715 r  iMacResult1/P[4]
+                         net (fo=2, routed)           1.300    10.015    iMacResult1_n_101
+    SLICE_X9Y48          LUT3 (Prop_lut3_I0_O)        0.124    10.139 r  iMacResult[4]_i_9/O
+                         net (fo=1, routed)           0.000    10.139    iMacResult[4]_i_9_n_0
+    SLICE_X9Y48          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532    10.671 r  iMacResult_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.671    iMacResult_reg[4]_i_1_n_0
+    SLICE_X9Y49          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.785 r  iMacResult_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.001    10.785    iMacResult_reg[8]_i_1_n_0
+    SLICE_X9Y50          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.899 r  iMacResult_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.899    iMacResult_reg[12]_i_1_n_0
+    SLICE_X9Y51          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.013 r  iMacResult_reg[16]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    11.013    iMacResult_reg[16]_i_1_n_0
+    SLICE_X9Y52          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.127 r  iMacResult_reg[20]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    11.127    iMacResult_reg[20]_i_1_n_0
+    SLICE_X9Y53          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.241 r  iMacResult_reg[24]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    11.241    iMacResult_reg[24]_i_1_n_0
+    SLICE_X9Y54          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.355 r  iMacResult_reg[28]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    11.355    iMacResult_reg[28]_i_1_n_0
+    SLICE_X9Y55          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.469 r  iMacResult_reg[32]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    11.469    iMacResult_reg[32]_i_1_n_0
+    SLICE_X9Y56          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.583 r  iMacResult_reg[36]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    11.583    iMacResult_reg[36]_i_1_n_0
+    SLICE_X9Y57          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.697 r  iMacResult_reg[40]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    11.697    iMacResult_reg[40]_i_1_n_0
+    SLICE_X9Y58          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.811 r  iMacResult_reg[44]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    11.811    iMacResult_reg[44]_i_1_n_0
+    SLICE_X9Y59          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.925 r  iMacResult_reg[48]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    11.925    iMacResult_reg[48]_i_1_n_0
+    SLICE_X9Y60          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    12.259 r  iMacResult_reg[52]_i_1/O[1]
+                         net (fo=1, routed)           0.000    12.259    iMacResult_reg[52]_i_1_n_6
+    SLICE_X9Y60          FDCE                                         r  iMacResult_reg[53]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock Clock rise edge)    200.000   200.000 r  
+    E15                                               0.000   200.000 r  Clock (IN)
+                         net (fo=0)                   0.000   200.000    Clock
+    E15                  IBUF (Prop_ibuf_I_O)         0.859   200.859 r  Clock_IBUF_inst/O
+                         net (fo=1, routed)           1.868   202.727    Clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091   202.818 r  Clock_IBUF_BUFG_inst/O
+                         net (fo=194, routed)         1.435   204.253    Clock_IBUF_BUFG
+    SLICE_X9Y60          FDCE                                         r  iMacResult_reg[53]/C
+                         clock pessimism              0.322   204.574    
+                         clock uncertainty           -0.035   204.539    
+    SLICE_X9Y60          FDCE (Setup_fdce_C_D)        0.062   204.601    iMacResult_reg[53]
+  -------------------------------------------------------------------
+                         required time                        204.601    
+                         arrival time                         -12.259    
+  -------------------------------------------------------------------
+                         slack                                192.342    
+
+Slack (MET) :             192.363ns  (required time - arrival time)
+  Source:                 iMacResult1/CLK
+                            (rising edge-triggered cell DSP48E1 clocked by Clock  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Destination:            iMacResult_reg[55]/D
+                            (rising edge-triggered cell FDCE clocked by Clock  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Path Group:             Clock
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            200.000ns  (Clock rise@200.000ns - Clock rise@0.000ns)
+  Data Path Delay:        7.533ns  (logic 6.232ns (82.733%)  route 1.301ns (17.267%))
+  Logic Levels:           14  (CARRY4=13 LUT3=1)
+  Clock Path Skew:        -0.132ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.253ns = ( 204.253 - 200.000 ) 
+    Source Clock Delay      (SCD):    4.706ns
+    Clock Pessimism Removal (CPR):    0.322ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock Clock rise edge)      0.000     0.000 r  
+    E15                                               0.000     0.000 r  Clock (IN)
+                         net (fo=0)                   0.000     0.000    Clock
+    E15                  IBUF (Prop_ibuf_I_O)         0.993     0.993 r  Clock_IBUF_inst/O
+                         net (fo=1, routed)           1.972     2.964    Clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.060 r  Clock_IBUF_BUFG_inst/O
+                         net (fo=194, routed)         1.646     4.706    Clock_IBUF_BUFG
+    DSP48_X0Y20          DSP48E1                                      r  iMacResult1/CLK
+  -------------------------------------------------------------------    -------------------
+    DSP48_X0Y20          DSP48E1 (Prop_dsp48e1_CLK_P[4])
+                                                      4.009     8.715 r  iMacResult1/P[4]
+                         net (fo=2, routed)           1.300    10.015    iMacResult1_n_101
+    SLICE_X9Y48          LUT3 (Prop_lut3_I0_O)        0.124    10.139 r  iMacResult[4]_i_9/O
+                         net (fo=1, routed)           0.000    10.139    iMacResult[4]_i_9_n_0
+    SLICE_X9Y48          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532    10.671 r  iMacResult_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.671    iMacResult_reg[4]_i_1_n_0
+    SLICE_X9Y49          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.785 r  iMacResult_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.001    10.785    iMacResult_reg[8]_i_1_n_0
+    SLICE_X9Y50          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.899 r  iMacResult_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.899    iMacResult_reg[12]_i_1_n_0
+    SLICE_X9Y51          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.013 r  iMacResult_reg[16]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    11.013    iMacResult_reg[16]_i_1_n_0
+    SLICE_X9Y52          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.127 r  iMacResult_reg[20]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    11.127    iMacResult_reg[20]_i_1_n_0
+    SLICE_X9Y53          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.241 r  iMacResult_reg[24]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    11.241    iMacResult_reg[24]_i_1_n_0
+    SLICE_X9Y54          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.355 r  iMacResult_reg[28]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    11.355    iMacResult_reg[28]_i_1_n_0
+    SLICE_X9Y55          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.469 r  iMacResult_reg[32]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    11.469    iMacResult_reg[32]_i_1_n_0
+    SLICE_X9Y56          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.583 r  iMacResult_reg[36]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    11.583    iMacResult_reg[36]_i_1_n_0
+    SLICE_X9Y57          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.697 r  iMacResult_reg[40]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    11.697    iMacResult_reg[40]_i_1_n_0
+    SLICE_X9Y58          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.811 r  iMacResult_reg[44]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    11.811    iMacResult_reg[44]_i_1_n_0
+    SLICE_X9Y59          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.925 r  iMacResult_reg[48]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    11.925    iMacResult_reg[48]_i_1_n_0
+    SLICE_X9Y60          CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313    12.238 r  iMacResult_reg[52]_i_1/O[3]
+                         net (fo=1, routed)           0.000    12.238    iMacResult_reg[52]_i_1_n_4
+    SLICE_X9Y60          FDCE                                         r  iMacResult_reg[55]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock Clock rise edge)    200.000   200.000 r  
+    E15                                               0.000   200.000 r  Clock (IN)
+                         net (fo=0)                   0.000   200.000    Clock
+    E15                  IBUF (Prop_ibuf_I_O)         0.859   200.859 r  Clock_IBUF_inst/O
+                         net (fo=1, routed)           1.868   202.727    Clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091   202.818 r  Clock_IBUF_BUFG_inst/O
+                         net (fo=194, routed)         1.435   204.253    Clock_IBUF_BUFG
+    SLICE_X9Y60          FDCE                                         r  iMacResult_reg[55]/C
+                         clock pessimism              0.322   204.574    
+                         clock uncertainty           -0.035   204.539    
+    SLICE_X9Y60          FDCE (Setup_fdce_C_D)        0.062   204.601    iMacResult_reg[55]
+  -------------------------------------------------------------------
+                         required time                        204.601    
+                         arrival time                         -12.238    
+  -------------------------------------------------------------------
+                         slack                                192.363    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.035ns  (arrival time - required time)
+  Source:                 iMadResult_reg[11]/C
+                            (rising edge-triggered cell FDCE clocked by Clock  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Destination:            OutputBufferD/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/DIADI[10]
+                            (rising edge-triggered cell RAMB36E1 clocked by Clock  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Path Group:             Clock
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (Clock rise@0.000ns - Clock rise@0.000ns)
+  Data Path Delay:        0.389ns  (logic 0.164ns (42.106%)  route 0.225ns (57.894%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.058ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.009ns
+    Source Clock Delay      (SCD):    1.450ns
+    Clock Pessimism Removal (CPR):    0.501ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock Clock rise edge)      0.000     0.000 r  
+    E15                                               0.000     0.000 r  Clock (IN)
+                         net (fo=0)                   0.000     0.000    Clock
+    E15                  IBUF (Prop_ibuf_I_O)         0.221     0.221 r  Clock_IBUF_inst/O
+                         net (fo=1, routed)           0.634     0.855    Clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.881 r  Clock_IBUF_BUFG_inst/O
+                         net (fo=194, routed)         0.569     1.450    Clock_IBUF_BUFG
+    SLICE_X8Y49          FDCE                                         r  iMadResult_reg[11]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X8Y49          FDCE (Prop_fdce_C_Q)         0.164     1.614 r  iMadResult_reg[11]/Q
+                         net (fo=1, routed)           0.225     1.840    OutputBufferD/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/dina[11]
+    RAMB36_X0Y9          RAMB36E1                                     r  OutputBufferD/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/DIADI[10]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock Clock rise edge)      0.000     0.000 r  
+    E15                                               0.000     0.000 r  Clock (IN)
+                         net (fo=0)                   0.000     0.000    Clock
+    E15                  IBUF (Prop_ibuf_I_O)         0.411     0.411 r  Clock_IBUF_inst/O
+                         net (fo=1, routed)           0.689     1.099    Clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.128 r  Clock_IBUF_BUFG_inst/O
+                         net (fo=194, routed)         0.881     2.009    OutputBufferD/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/clka
+    RAMB36_X0Y9          RAMB36E1                                     r  OutputBufferD/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/CLKARDCLK
+                         clock pessimism             -0.501     1.509    
+    RAMB36_X0Y9          RAMB36E1 (Hold_ramb36e1_CLKARDCLK_DIADI[10])
+                                                      0.296     1.805    OutputBufferD/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram
+  -------------------------------------------------------------------
+                         required time                         -1.805    
+                         arrival time                           1.840    
+  -------------------------------------------------------------------
+                         slack                                  0.035    
+
+Slack (MET) :             0.040ns  (arrival time - required time)
+  Source:                 iMadResult_reg[40]/C
+                            (rising edge-triggered cell FDCE clocked by Clock  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Destination:            OutputBufferD/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/DIADI[4]
+                            (rising edge-triggered cell RAMB36E1 clocked by Clock  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Path Group:             Clock
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (Clock rise@0.000ns - Clock rise@0.000ns)
+  Data Path Delay:        0.390ns  (logic 0.164ns (41.999%)  route 0.226ns (58.001%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.054ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.997ns
+    Source Clock Delay      (SCD):    1.442ns
+    Clock Pessimism Removal (CPR):    0.501ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock Clock rise edge)      0.000     0.000 r  
+    E15                                               0.000     0.000 r  Clock (IN)
+                         net (fo=0)                   0.000     0.000    Clock
+    E15                  IBUF (Prop_ibuf_I_O)         0.221     0.221 r  Clock_IBUF_inst/O
+                         net (fo=1, routed)           0.634     0.855    Clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.881 r  Clock_IBUF_BUFG_inst/O
+                         net (fo=194, routed)         0.561     1.442    Clock_IBUF_BUFG
+    SLICE_X8Y57          FDCE                                         r  iMadResult_reg[40]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X8Y57          FDCE (Prop_fdce_C_Q)         0.164     1.606 r  iMadResult_reg[40]/Q
+                         net (fo=1, routed)           0.226     1.833    OutputBufferD/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/dina[4]
+    RAMB36_X0Y12         RAMB36E1                                     r  OutputBufferD/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/DIADI[4]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock Clock rise edge)      0.000     0.000 r  
+    E15                                               0.000     0.000 r  Clock (IN)
+                         net (fo=0)                   0.000     0.000    Clock
+    E15                  IBUF (Prop_ibuf_I_O)         0.411     0.411 r  Clock_IBUF_inst/O
+                         net (fo=1, routed)           0.689     1.099    Clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.128 r  Clock_IBUF_BUFG_inst/O
+                         net (fo=194, routed)         0.869     1.997    OutputBufferD/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/clka
+    RAMB36_X0Y12         RAMB36E1                                     r  OutputBufferD/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/CLKARDCLK
+                         clock pessimism             -0.501     1.497    
+    RAMB36_X0Y12         RAMB36E1 (Hold_ramb36e1_CLKARDCLK_DIADI[4])
+                                                      0.296     1.793    OutputBufferD/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram
+  -------------------------------------------------------------------
+                         required time                         -1.793    
+                         arrival time                           1.833    
+  -------------------------------------------------------------------
+                         slack                                  0.040    
+
+Slack (MET) :             0.042ns  (arrival time - required time)
+  Source:                 iMacResult_reg[11]/C
+                            (rising edge-triggered cell FDCE clocked by Clock  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Destination:            iMadResult_reg[12]/D
+                            (rising edge-triggered cell FDCE clocked by Clock  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Path Group:             Clock
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (Clock rise@0.000ns - Clock rise@0.000ns)
+  Data Path Delay:        0.440ns  (logic 0.348ns (79.109%)  route 0.092ns (20.891%))
+  Logic Levels:           3  (CARRY4=2 LUT4=1)
+  Clock Path Skew:        0.264ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.961ns
+    Source Clock Delay      (SCD):    1.450ns
+    Clock Pessimism Removal (CPR):    0.247ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock Clock rise edge)      0.000     0.000 r  
+    E15                                               0.000     0.000 r  Clock (IN)
+                         net (fo=0)                   0.000     0.000    Clock
+    E15                  IBUF (Prop_ibuf_I_O)         0.221     0.221 r  Clock_IBUF_inst/O
+                         net (fo=1, routed)           0.634     0.855    Clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.881 r  Clock_IBUF_BUFG_inst/O
+                         net (fo=194, routed)         0.569     1.450    Clock_IBUF_BUFG
+    SLICE_X9Y49          FDCE                                         r  iMacResult_reg[11]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X9Y49          FDCE (Prop_fdce_C_Q)         0.141     1.591 r  iMacResult_reg[11]/Q
+                         net (fo=2, routed)           0.091     1.682    iMacResult_reg[11]
+    SLICE_X8Y49          LUT4 (Prop_lut4_I3_O)        0.045     1.727 r  iMadResult[11]_i_6/O
+                         net (fo=1, routed)           0.000     1.727    iMadResult[11]_i_6_n_0
+    SLICE_X8Y49          CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.109     1.836 r  iMadResult_reg[11]_i_1/CO[3]
+                         net (fo=1, routed)           0.001     1.837    iMadResult_reg[11]_i_1_n_0
+    SLICE_X8Y50          CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.053     1.890 r  iMadResult_reg[15]_i_1/O[0]
+                         net (fo=1, routed)           0.000     1.890    iMadResult_reg[15]_i_1_n_7
+    SLICE_X8Y50          FDCE                                         r  iMadResult_reg[12]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock Clock rise edge)      0.000     0.000 r  
+    E15                                               0.000     0.000 r  Clock (IN)
+                         net (fo=0)                   0.000     0.000    Clock
+    E15                  IBUF (Prop_ibuf_I_O)         0.411     0.411 r  Clock_IBUF_inst/O
+                         net (fo=1, routed)           0.689     1.099    Clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.128 r  Clock_IBUF_BUFG_inst/O
+                         net (fo=194, routed)         0.833     1.961    Clock_IBUF_BUFG
+    SLICE_X8Y50          FDCE                                         r  iMadResult_reg[12]/C
+                         clock pessimism             -0.247     1.714    
+    SLICE_X8Y50          FDCE (Hold_fdce_C_D)         0.134     1.848    iMadResult_reg[12]
+  -------------------------------------------------------------------
+                         required time                         -1.848    
+                         arrival time                           1.890    
+  -------------------------------------------------------------------
+                         slack                                  0.042    
+
+Slack (MET) :             0.055ns  (arrival time - required time)
+  Source:                 iMacResult_reg[11]/C
+                            (rising edge-triggered cell FDCE clocked by Clock  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Destination:            iMadResult_reg[14]/D
+                            (rising edge-triggered cell FDCE clocked by Clock  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Path Group:             Clock
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (Clock rise@0.000ns - Clock rise@0.000ns)
+  Data Path Delay:        0.453ns  (logic 0.361ns (79.708%)  route 0.092ns (20.292%))
+  Logic Levels:           3  (CARRY4=2 LUT4=1)
+  Clock Path Skew:        0.264ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.961ns
+    Source Clock Delay      (SCD):    1.450ns
+    Clock Pessimism Removal (CPR):    0.247ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock Clock rise edge)      0.000     0.000 r  
+    E15                                               0.000     0.000 r  Clock (IN)
+                         net (fo=0)                   0.000     0.000    Clock
+    E15                  IBUF (Prop_ibuf_I_O)         0.221     0.221 r  Clock_IBUF_inst/O
+                         net (fo=1, routed)           0.634     0.855    Clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.881 r  Clock_IBUF_BUFG_inst/O
+                         net (fo=194, routed)         0.569     1.450    Clock_IBUF_BUFG
+    SLICE_X9Y49          FDCE                                         r  iMacResult_reg[11]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X9Y49          FDCE (Prop_fdce_C_Q)         0.141     1.591 r  iMacResult_reg[11]/Q
+                         net (fo=2, routed)           0.091     1.682    iMacResult_reg[11]
+    SLICE_X8Y49          LUT4 (Prop_lut4_I3_O)        0.045     1.727 r  iMadResult[11]_i_6/O
+                         net (fo=1, routed)           0.000     1.727    iMadResult[11]_i_6_n_0
+    SLICE_X8Y49          CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.109     1.836 r  iMadResult_reg[11]_i_1/CO[3]
+                         net (fo=1, routed)           0.001     1.837    iMadResult_reg[11]_i_1_n_0
+    SLICE_X8Y50          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.066     1.903 r  iMadResult_reg[15]_i_1/O[2]
+                         net (fo=1, routed)           0.000     1.903    iMadResult_reg[15]_i_1_n_5
+    SLICE_X8Y50          FDCE                                         r  iMadResult_reg[14]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock Clock rise edge)      0.000     0.000 r  
+    E15                                               0.000     0.000 r  Clock (IN)
+                         net (fo=0)                   0.000     0.000    Clock
+    E15                  IBUF (Prop_ibuf_I_O)         0.411     0.411 r  Clock_IBUF_inst/O
+                         net (fo=1, routed)           0.689     1.099    Clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.128 r  Clock_IBUF_BUFG_inst/O
+                         net (fo=194, routed)         0.833     1.961    Clock_IBUF_BUFG
+    SLICE_X8Y50          FDCE                                         r  iMadResult_reg[14]/C
+                         clock pessimism             -0.247     1.714    
+    SLICE_X8Y50          FDCE (Hold_fdce_C_D)         0.134     1.848    iMadResult_reg[14]
+  -------------------------------------------------------------------
+                         required time                         -1.848    
+                         arrival time                           1.903    
+  -------------------------------------------------------------------
+                         slack                                  0.055    
+
+Slack (MET) :             0.060ns  (arrival time - required time)
+  Source:                 iMadResult_reg[48]/C
+                            (rising edge-triggered cell FDCE clocked by Clock  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Destination:            OutputBufferD/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/DIADI[13]
+                            (rising edge-triggered cell RAMB36E1 clocked by Clock  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Path Group:             Clock
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (Clock rise@0.000ns - Clock rise@0.000ns)
+  Data Path Delay:        0.410ns  (logic 0.164ns (39.962%)  route 0.246ns (60.038%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.054ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.997ns
+    Source Clock Delay      (SCD):    1.442ns
+    Clock Pessimism Removal (CPR):    0.501ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock Clock rise edge)      0.000     0.000 r  
+    E15                                               0.000     0.000 r  Clock (IN)
+                         net (fo=0)                   0.000     0.000    Clock
+    E15                  IBUF (Prop_ibuf_I_O)         0.221     0.221 r  Clock_IBUF_inst/O
+                         net (fo=1, routed)           0.634     0.855    Clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.881 r  Clock_IBUF_BUFG_inst/O
+                         net (fo=194, routed)         0.561     1.442    Clock_IBUF_BUFG
+    SLICE_X8Y59          FDCE                                         r  iMadResult_reg[48]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X8Y59          FDCE (Prop_fdce_C_Q)         0.164     1.606 r  iMadResult_reg[48]/Q
+                         net (fo=1, routed)           0.246     1.853    OutputBufferD/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/dina[12]
+    RAMB36_X0Y12         RAMB36E1                                     r  OutputBufferD/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/DIADI[13]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock Clock rise edge)      0.000     0.000 r  
+    E15                                               0.000     0.000 r  Clock (IN)
+                         net (fo=0)                   0.000     0.000    Clock
+    E15                  IBUF (Prop_ibuf_I_O)         0.411     0.411 r  Clock_IBUF_inst/O
+                         net (fo=1, routed)           0.689     1.099    Clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.128 r  Clock_IBUF_BUFG_inst/O
+                         net (fo=194, routed)         0.869     1.997    OutputBufferD/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/clka
+    RAMB36_X0Y12         RAMB36E1                                     r  OutputBufferD/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/CLKARDCLK
+                         clock pessimism             -0.501     1.497    
+    RAMB36_X0Y12         RAMB36E1 (Hold_ramb36e1_CLKARDCLK_DIADI[13])
+                                                      0.296     1.793    OutputBufferD/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram
+  -------------------------------------------------------------------
+                         required time                         -1.793    
+                         arrival time                           1.853    
+  -------------------------------------------------------------------
+                         slack                                  0.060    
+
+Slack (MET) :             0.064ns  (arrival time - required time)
+  Source:                 iMadResult_reg[44]/C
+                            (rising edge-triggered cell FDCE clocked by Clock  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Destination:            OutputBufferD/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/DIADI[9]
+                            (rising edge-triggered cell RAMB36E1 clocked by Clock  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Path Group:             Clock
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (Clock rise@0.000ns - Clock rise@0.000ns)
+  Data Path Delay:        0.415ns  (logic 0.164ns (39.535%)  route 0.251ns (60.465%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.054ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.997ns
+    Source Clock Delay      (SCD):    1.442ns
+    Clock Pessimism Removal (CPR):    0.501ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock Clock rise edge)      0.000     0.000 r  
+    E15                                               0.000     0.000 r  Clock (IN)
+                         net (fo=0)                   0.000     0.000    Clock
+    E15                  IBUF (Prop_ibuf_I_O)         0.221     0.221 r  Clock_IBUF_inst/O
+                         net (fo=1, routed)           0.634     0.855    Clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.881 r  Clock_IBUF_BUFG_inst/O
+                         net (fo=194, routed)         0.561     1.442    Clock_IBUF_BUFG
+    SLICE_X8Y58          FDCE                                         r  iMadResult_reg[44]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X8Y58          FDCE (Prop_fdce_C_Q)         0.164     1.606 r  iMadResult_reg[44]/Q
+                         net (fo=1, routed)           0.251     1.857    OutputBufferD/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/dina[8]
+    RAMB36_X0Y12         RAMB36E1                                     r  OutputBufferD/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/DIADI[9]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock Clock rise edge)      0.000     0.000 r  
+    E15                                               0.000     0.000 r  Clock (IN)
+                         net (fo=0)                   0.000     0.000    Clock
+    E15                  IBUF (Prop_ibuf_I_O)         0.411     0.411 r  Clock_IBUF_inst/O
+                         net (fo=1, routed)           0.689     1.099    Clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.128 r  Clock_IBUF_BUFG_inst/O
+                         net (fo=194, routed)         0.869     1.997    OutputBufferD/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/clka
+    RAMB36_X0Y12         RAMB36E1                                     r  OutputBufferD/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/CLKARDCLK
+                         clock pessimism             -0.501     1.497    
+    RAMB36_X0Y12         RAMB36E1 (Hold_ramb36e1_CLKARDCLK_DIADI[9])
+                                                      0.296     1.793    OutputBufferD/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram
+  -------------------------------------------------------------------
+                         required time                         -1.793    
+                         arrival time                           1.857    
+  -------------------------------------------------------------------
+                         slack                                  0.064    
+
+Slack (MET) :             0.066ns  (arrival time - required time)
+  Source:                 iMadResult_reg[46]/C
+                            (rising edge-triggered cell FDCE clocked by Clock  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Destination:            OutputBufferD/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/DIADI[11]
+                            (rising edge-triggered cell RAMB36E1 clocked by Clock  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Path Group:             Clock
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (Clock rise@0.000ns - Clock rise@0.000ns)
+  Data Path Delay:        0.417ns  (logic 0.164ns (39.345%)  route 0.253ns (60.655%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.054ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.997ns
+    Source Clock Delay      (SCD):    1.442ns
+    Clock Pessimism Removal (CPR):    0.501ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock Clock rise edge)      0.000     0.000 r  
+    E15                                               0.000     0.000 r  Clock (IN)
+                         net (fo=0)                   0.000     0.000    Clock
+    E15                  IBUF (Prop_ibuf_I_O)         0.221     0.221 r  Clock_IBUF_inst/O
+                         net (fo=1, routed)           0.634     0.855    Clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.881 r  Clock_IBUF_BUFG_inst/O
+                         net (fo=194, routed)         0.561     1.442    Clock_IBUF_BUFG
+    SLICE_X8Y58          FDCE                                         r  iMadResult_reg[46]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X8Y58          FDCE (Prop_fdce_C_Q)         0.164     1.606 r  iMadResult_reg[46]/Q
+                         net (fo=1, routed)           0.253     1.859    OutputBufferD/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/dina[10]
+    RAMB36_X0Y12         RAMB36E1                                     r  OutputBufferD/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/DIADI[11]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock Clock rise edge)      0.000     0.000 r  
+    E15                                               0.000     0.000 r  Clock (IN)
+                         net (fo=0)                   0.000     0.000    Clock
+    E15                  IBUF (Prop_ibuf_I_O)         0.411     0.411 r  Clock_IBUF_inst/O
+                         net (fo=1, routed)           0.689     1.099    Clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.128 r  Clock_IBUF_BUFG_inst/O
+                         net (fo=194, routed)         0.869     1.997    OutputBufferD/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/clka
+    RAMB36_X0Y12         RAMB36E1                                     r  OutputBufferD/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/CLKARDCLK
+                         clock pessimism             -0.501     1.497    
+    RAMB36_X0Y12         RAMB36E1 (Hold_ramb36e1_CLKARDCLK_DIADI[11])
+                                                      0.296     1.793    OutputBufferD/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram
+  -------------------------------------------------------------------
+                         required time                         -1.793    
+                         arrival time                           1.859    
+  -------------------------------------------------------------------
+                         slack                                  0.066    
+
+Slack (MET) :             0.078ns  (arrival time - required time)
+  Source:                 iMacResult_reg[11]/C
+                            (rising edge-triggered cell FDCE clocked by Clock  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Destination:            iMadResult_reg[13]/D
+                            (rising edge-triggered cell FDCE clocked by Clock  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Path Group:             Clock
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (Clock rise@0.000ns - Clock rise@0.000ns)
+  Data Path Delay:        0.476ns  (logic 0.384ns (80.689%)  route 0.092ns (19.311%))
+  Logic Levels:           3  (CARRY4=2 LUT4=1)
+  Clock Path Skew:        0.264ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.961ns
+    Source Clock Delay      (SCD):    1.450ns
+    Clock Pessimism Removal (CPR):    0.247ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock Clock rise edge)      0.000     0.000 r  
+    E15                                               0.000     0.000 r  Clock (IN)
+                         net (fo=0)                   0.000     0.000    Clock
+    E15                  IBUF (Prop_ibuf_I_O)         0.221     0.221 r  Clock_IBUF_inst/O
+                         net (fo=1, routed)           0.634     0.855    Clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.881 r  Clock_IBUF_BUFG_inst/O
+                         net (fo=194, routed)         0.569     1.450    Clock_IBUF_BUFG
+    SLICE_X9Y49          FDCE                                         r  iMacResult_reg[11]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X9Y49          FDCE (Prop_fdce_C_Q)         0.141     1.591 r  iMacResult_reg[11]/Q
+                         net (fo=2, routed)           0.091     1.682    iMacResult_reg[11]
+    SLICE_X8Y49          LUT4 (Prop_lut4_I3_O)        0.045     1.727 r  iMadResult[11]_i_6/O
+                         net (fo=1, routed)           0.000     1.727    iMadResult[11]_i_6_n_0
+    SLICE_X8Y49          CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.109     1.836 r  iMadResult_reg[11]_i_1/CO[3]
+                         net (fo=1, routed)           0.001     1.837    iMadResult_reg[11]_i_1_n_0
+    SLICE_X8Y50          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.089     1.926 r  iMadResult_reg[15]_i_1/O[1]
+                         net (fo=1, routed)           0.000     1.926    iMadResult_reg[15]_i_1_n_6
+    SLICE_X8Y50          FDCE                                         r  iMadResult_reg[13]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock Clock rise edge)      0.000     0.000 r  
+    E15                                               0.000     0.000 r  Clock (IN)
+                         net (fo=0)                   0.000     0.000    Clock
+    E15                  IBUF (Prop_ibuf_I_O)         0.411     0.411 r  Clock_IBUF_inst/O
+                         net (fo=1, routed)           0.689     1.099    Clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.128 r  Clock_IBUF_BUFG_inst/O
+                         net (fo=194, routed)         0.833     1.961    Clock_IBUF_BUFG
+    SLICE_X8Y50          FDCE                                         r  iMadResult_reg[13]/C
+                         clock pessimism             -0.247     1.714    
+    SLICE_X8Y50          FDCE (Hold_fdce_C_D)         0.134     1.848    iMadResult_reg[13]
+  -------------------------------------------------------------------
+                         required time                         -1.848    
+                         arrival time                           1.926    
+  -------------------------------------------------------------------
+                         slack                                  0.078    
+
+Slack (MET) :             0.080ns  (arrival time - required time)
+  Source:                 iMacResult_reg[11]/C
+                            (rising edge-triggered cell FDCE clocked by Clock  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Destination:            iMadResult_reg[15]/D
+                            (rising edge-triggered cell FDCE clocked by Clock  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Path Group:             Clock
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (Clock rise@0.000ns - Clock rise@0.000ns)
+  Data Path Delay:        0.478ns  (logic 0.386ns (80.770%)  route 0.092ns (19.230%))
+  Logic Levels:           3  (CARRY4=2 LUT4=1)
+  Clock Path Skew:        0.264ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.961ns
+    Source Clock Delay      (SCD):    1.450ns
+    Clock Pessimism Removal (CPR):    0.247ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock Clock rise edge)      0.000     0.000 r  
+    E15                                               0.000     0.000 r  Clock (IN)
+                         net (fo=0)                   0.000     0.000    Clock
+    E15                  IBUF (Prop_ibuf_I_O)         0.221     0.221 r  Clock_IBUF_inst/O
+                         net (fo=1, routed)           0.634     0.855    Clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.881 r  Clock_IBUF_BUFG_inst/O
+                         net (fo=194, routed)         0.569     1.450    Clock_IBUF_BUFG
+    SLICE_X9Y49          FDCE                                         r  iMacResult_reg[11]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X9Y49          FDCE (Prop_fdce_C_Q)         0.141     1.591 r  iMacResult_reg[11]/Q
+                         net (fo=2, routed)           0.091     1.682    iMacResult_reg[11]
+    SLICE_X8Y49          LUT4 (Prop_lut4_I3_O)        0.045     1.727 r  iMadResult[11]_i_6/O
+                         net (fo=1, routed)           0.000     1.727    iMadResult[11]_i_6_n_0
+    SLICE_X8Y49          CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.109     1.836 r  iMadResult_reg[11]_i_1/CO[3]
+                         net (fo=1, routed)           0.001     1.837    iMadResult_reg[11]_i_1_n_0
+    SLICE_X8Y50          CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.091     1.928 r  iMadResult_reg[15]_i_1/O[3]
+                         net (fo=1, routed)           0.000     1.928    iMadResult_reg[15]_i_1_n_4
+    SLICE_X8Y50          FDCE                                         r  iMadResult_reg[15]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock Clock rise edge)      0.000     0.000 r  
+    E15                                               0.000     0.000 r  Clock (IN)
+                         net (fo=0)                   0.000     0.000    Clock
+    E15                  IBUF (Prop_ibuf_I_O)         0.411     0.411 r  Clock_IBUF_inst/O
+                         net (fo=1, routed)           0.689     1.099    Clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.128 r  Clock_IBUF_BUFG_inst/O
+                         net (fo=194, routed)         0.833     1.961    Clock_IBUF_BUFG
+    SLICE_X8Y50          FDCE                                         r  iMadResult_reg[15]/C
+                         clock pessimism             -0.247     1.714    
+    SLICE_X8Y50          FDCE (Hold_fdce_C_D)         0.134     1.848    iMadResult_reg[15]
+  -------------------------------------------------------------------
+                         required time                         -1.848    
+                         arrival time                           1.928    
+  -------------------------------------------------------------------
+                         slack                                  0.080    
+
+Slack (MET) :             0.082ns  (arrival time - required time)
+  Source:                 iMacResult_reg[11]/C
+                            (rising edge-triggered cell FDCE clocked by Clock  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Destination:            iMadResult_reg[16]/D
+                            (rising edge-triggered cell FDCE clocked by Clock  {rise@0.000ns fall@100.000ns period=200.000ns})
+  Path Group:             Clock
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (Clock rise@0.000ns - Clock rise@0.000ns)
+  Data Path Delay:        0.480ns  (logic 0.388ns (80.850%)  route 0.092ns (19.150%))
+  Logic Levels:           4  (CARRY4=3 LUT4=1)
+  Clock Path Skew:        0.264ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.961ns
+    Source Clock Delay      (SCD):    1.450ns
+    Clock Pessimism Removal (CPR):    0.247ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock Clock rise edge)      0.000     0.000 r  
+    E15                                               0.000     0.000 r  Clock (IN)
+                         net (fo=0)                   0.000     0.000    Clock
+    E15                  IBUF (Prop_ibuf_I_O)         0.221     0.221 r  Clock_IBUF_inst/O
+                         net (fo=1, routed)           0.634     0.855    Clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.881 r  Clock_IBUF_BUFG_inst/O
+                         net (fo=194, routed)         0.569     1.450    Clock_IBUF_BUFG
+    SLICE_X9Y49          FDCE                                         r  iMacResult_reg[11]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X9Y49          FDCE (Prop_fdce_C_Q)         0.141     1.591 r  iMacResult_reg[11]/Q
+                         net (fo=2, routed)           0.091     1.682    iMacResult_reg[11]
+    SLICE_X8Y49          LUT4 (Prop_lut4_I3_O)        0.045     1.727 r  iMadResult[11]_i_6/O
+                         net (fo=1, routed)           0.000     1.727    iMadResult[11]_i_6_n_0
+    SLICE_X8Y49          CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.109     1.836 r  iMadResult_reg[11]_i_1/CO[3]
+                         net (fo=1, routed)           0.001     1.837    iMadResult_reg[11]_i_1_n_0
+    SLICE_X8Y50          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.040     1.877 r  iMadResult_reg[15]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     1.877    iMadResult_reg[15]_i_1_n_0
+    SLICE_X8Y51          CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.053     1.930 r  iMadResult_reg[19]_i_1/O[0]
+                         net (fo=1, routed)           0.000     1.930    iMadResult_reg[19]_i_1_n_7
+    SLICE_X8Y51          FDCE                                         r  iMadResult_reg[16]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock Clock rise edge)      0.000     0.000 r  
+    E15                                               0.000     0.000 r  Clock (IN)
+                         net (fo=0)                   0.000     0.000    Clock
+    E15                  IBUF (Prop_ibuf_I_O)         0.411     0.411 r  Clock_IBUF_inst/O
+                         net (fo=1, routed)           0.689     1.099    Clock_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.128 r  Clock_IBUF_BUFG_inst/O
+                         net (fo=194, routed)         0.833     1.961    Clock_IBUF_BUFG
+    SLICE_X8Y51          FDCE                                         r  iMadResult_reg[16]/C
+                         clock pessimism             -0.247     1.714    
+    SLICE_X8Y51          FDCE (Hold_fdce_C_D)         0.134     1.848    iMadResult_reg[16]
+  -------------------------------------------------------------------
+                         required time                         -1.848    
+                         arrival time                           1.930    
+  -------------------------------------------------------------------
+                         slack                                  0.082    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         Clock
+Waveform(ns):       { 0.000 100.000 }
+Period(ns):         200.000
+Sources:            { Clock }
+
+Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location      Pin
+Min Period        n/a     RAMB18E1/CLKARDCLK  n/a            2.576         200.000     197.424    RAMB18_X0Y22  InputBufferA/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram/CLKARDCLK
+Min Period        n/a     RAMB18E1/CLKBWRCLK  n/a            2.576         200.000     197.424    RAMB18_X0Y22  InputBufferA/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram/CLKBWRCLK
+Min Period        n/a     RAMB18E1/CLKARDCLK  n/a            2.576         200.000     197.424    RAMB18_X0Y20  InputBufferB/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram/CLKARDCLK
+Min Period        n/a     RAMB18E1/CLKBWRCLK  n/a            2.576         200.000     197.424    RAMB18_X0Y20  InputBufferB/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram/CLKBWRCLK
+Min Period        n/a     RAMB18E1/CLKARDCLK  n/a            2.576         200.000     197.424    RAMB18_X0Y21  InputBufferC/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram/CLKARDCLK
+Min Period        n/a     RAMB18E1/CLKBWRCLK  n/a            2.576         200.000     197.424    RAMB18_X0Y21  InputBufferC/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram/CLKBWRCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.576         200.000     197.424    RAMB36_X0Y9   OutputBufferD/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKBWRCLK  n/a            2.576         200.000     197.424    RAMB36_X0Y9   OutputBufferD/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/CLKBWRCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.576         200.000     197.424    RAMB36_X0Y12  OutputBufferD/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKBWRCLK  n/a            2.576         200.000     197.424    RAMB36_X0Y12  OutputBufferD/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram/CLKBWRCLK
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         100.000     99.500     SLICE_X10Y51  iColCountB_reg[0]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         100.000     99.500     SLICE_X7Y52   iColCountB_reg[1]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         100.000     99.500     SLICE_X10Y51  iColCountB_reg[2]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         100.000     99.500     SLICE_X10Y51  iColCountB_reg[3]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         100.000     99.500     SLICE_X10Y51  iColCountB_reg[4]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         100.000     99.500     SLICE_X10Y51  iColCountB_reg[5]/C
+Low Pulse Width   Slow    FDCE/C              n/a            0.500         100.000     99.500     SLICE_X9Y47   iMacResult_reg[0]/C
+Low Pulse Width   Slow    FDCE/C              n/a            0.500         100.000     99.500     SLICE_X9Y49   iMacResult_reg[10]/C
+Low Pulse Width   Slow    FDCE/C              n/a            0.500         100.000     99.500     SLICE_X9Y49   iMacResult_reg[11]/C
+Low Pulse Width   Slow    FDCE/C              n/a            0.500         100.000     99.500     SLICE_X9Y47   iMacResult_reg[1]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         100.000     99.500     SLICE_X6Y55   iColCountA_reg[0]/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         100.000     99.500     SLICE_X6Y55   iColCountA_reg[0]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         100.000     99.500     SLICE_X6Y55   iColCountA_reg[1]/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         100.000     99.500     SLICE_X6Y55   iColCountA_reg[1]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         100.000     99.500     SLICE_X6Y55   iColCountA_reg[2]/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         100.000     99.500     SLICE_X6Y55   iColCountA_reg[2]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         100.000     99.500     SLICE_X5Y55   iColCountA_reg[3]/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         100.000     99.500     SLICE_X5Y55   iColCountA_reg[3]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         100.000     99.500     SLICE_X6Y54   iColCountA_reg[4]/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         100.000     99.500     SLICE_X6Y54   iColCountA_reg[4]/C
+
+
+

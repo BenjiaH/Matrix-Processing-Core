@@ -1,0 +1,7 @@
+Running: xsim.dir/tb_IntMatProCore_behav/xsimk.exe -simmode gui -wdb tb_IntMatProCore_behav.wdb -simrunnum 0 -socket 1467
+Design successfully loaded
+Design Loading Memory Usage: 8956 KB (Peak: 8956 KB)
+Design Loading CPU Usage: 30 ms
+Simulation completed
+Simulation Memory Usage: 14868 KB (Peak: 14868 KB)
+Simulation CPU Usage: 1124 ms

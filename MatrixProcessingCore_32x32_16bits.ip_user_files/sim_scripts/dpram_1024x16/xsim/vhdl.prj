@@ -1,0 +1,4 @@
+vhdl xil_defaultlib  \
+"../../../../MatrixProcessingCore_32x32_16bits.srcs/sources_1/ip/dpram_1024x16/dpram_1024x16_sim_netlist.vhdl" \
+
+nosort

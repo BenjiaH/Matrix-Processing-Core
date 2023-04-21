@@ -1,0 +1,1 @@
+--relax --debug typical --mt auto -L xil_defaultlib -L secureip -L xpm --snapshot dpram_1024x64_D xil_defaultlib.dpram_1024x64_D -log elaborate.log

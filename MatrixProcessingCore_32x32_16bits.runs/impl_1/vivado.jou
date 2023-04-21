@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.3.1 (64-bit)
+# SW Build 2489853 on Tue Mar 26 04:20:25 MDT 2019
+# IP Build 2486929 on Tue Mar 26 06:44:21 MDT 2019
+# Start of session at: Mon Apr 10 00:58:22 2023
+# Process ID: 14748
+# Current directory: E:/Users/benji/OneDrive/FPGA_Project/EEEE4123/CW/VivadoPrj/MatrixProcessingCore_32x32_16bits/MatrixProcessingCore_32x32_16bits.runs/impl_1
+# Command line: vivado.exe -log IntMatProCore.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source IntMatProCore.tcl -notrace
+# Log file: E:/Users/benji/OneDrive/FPGA_Project/EEEE4123/CW/VivadoPrj/MatrixProcessingCore_32x32_16bits/MatrixProcessingCore_32x32_16bits.runs/impl_1/IntMatProCore.vdi
+# Journal file: E:/Users/benji/OneDrive/FPGA_Project/EEEE4123/CW/VivadoPrj/MatrixProcessingCore_32x32_16bits/MatrixProcessingCore_32x32_16bits.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source IntMatProCore.tcl -notrace

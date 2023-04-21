@@ -1,0 +1,9 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../MatrixProcessingCore_32x32_16bits.srcs/sources_1/ip/dpram_1024x64/dpram_1024x64_sim_netlist.vhdl" \
+"../../../../MatrixProcessingCore_32x32_16bits.srcs/sources_1/ip/dpram_1024x16/dpram_1024x16_sim_netlist.vhdl" \
+"../../../../MatrixProcessingCore_32x32_16bits.srcs/sources_1/new/IntMatProCore_32x32_16bits.vhd" \
+"../../../../MatrixProcessingCore_32x32_16bits.srcs/sim_1/new/tb_IntMatProCore_32x32_16bits.vhd" \
+
+# Do not sort compile order
+nosort

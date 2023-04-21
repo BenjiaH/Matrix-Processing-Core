@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.3.1 (64-bit)
+# SW Build 2489853 on Tue Mar 26 04:20:25 MDT 2019
+# IP Build 2486929 on Tue Mar 26 06:44:21 MDT 2019
+# Start of session at: Sat Apr  1 19:05:59 2023
+# Process ID: 26044
+# Current directory: E:/Users/benji/OneDrive/FPGA_Project/EEEE4123/CW/VivadoPrj/MatrixProcessingCore_32x32_16bits/MatrixProcessingCore_32x32_16bits.runs/dpram_1024x16_A_synth_1
+# Command line: vivado.exe -log dpram_1024x16_A.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source dpram_1024x16_A.tcl
+# Log file: E:/Users/benji/OneDrive/FPGA_Project/EEEE4123/CW/VivadoPrj/MatrixProcessingCore_32x32_16bits/MatrixProcessingCore_32x32_16bits.runs/dpram_1024x16_A_synth_1/dpram_1024x16_A.vds
+# Journal file: E:/Users/benji/OneDrive/FPGA_Project/EEEE4123/CW/VivadoPrj/MatrixProcessingCore_32x32_16bits/MatrixProcessingCore_32x32_16bits.runs/dpram_1024x16_A_synth_1\vivado.jou
+#-----------------------------------------------------------
+source dpram_1024x16_A.tcl -notrace
